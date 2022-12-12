@@ -34,6 +34,7 @@ public class Pasos extends AppCompatActivity implements SensorEventListener{
         textViewStepCounter = findViewById(R.id.textView5);
         textViewStepDetector = findViewById(R.id.textView6);
 
+
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
 
         if(sensorManager.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)!=null){
