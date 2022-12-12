@@ -6,18 +6,27 @@ import android.content.Intent;
 import android.speech.RecognizerIntent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 public class Voz extends Activity {
     TextView grabar;
     private static final int RECOGNIZE_SPEECH_ACTIVITY = 1;
-
+    Button btnregre;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voz);
         grabar = (TextView) findViewById(R.id.txtGrabarVoz);
+        btnregre = findViewById(R.id.btnregresar);
+        btnregre.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override
