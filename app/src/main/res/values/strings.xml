@@ -10,4 +10,6 @@
     <string name="sotw_northwest">NW</string>
     <string name="contador_de_pasos">Contador de pasos</string>
     <string name="detector_de_pasos">Detector de pasos</string>
+    <string name="regresar">Regresar</string>
+    <string name="contador_de_pasos1">Contador de pasos</string>
 </resources>

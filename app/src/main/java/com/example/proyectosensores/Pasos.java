@@ -4,13 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class Pasos extends AppCompatActivity implements SensorEventListener{
@@ -20,11 +23,21 @@ public class Pasos extends AppCompatActivity implements SensorEventListener{
     private Sensor mStepcounter;
     private boolean isCounterSensorPresent;
     int stepCount = 0;
+    private Button btnregre;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pasos);
+
+        btnregre = findViewById(R.id.btnregresar2);
+        btnregre.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACTIVITY_RECOGNITION) == PackageManager.PERMISSION_DENIED){
             requestPermissions(new String[]{Manifest.permission.ACTIVITY_RECOGNITION}, 0);
