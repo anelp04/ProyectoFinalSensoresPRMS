@@ -8,4 +8,6 @@
     <string name="sotw_southwest">SW</string>
     <string name="sotw_west">W</string>
     <string name="sotw_northwest">NW</string>
+    <string name="contador_de_pasos">Contador de pasos</string>
+    <string name="detector_de_pasos">Detector de pasos</string>
 </resources>
